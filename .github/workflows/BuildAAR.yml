@@ -30,6 +30,6 @@ jobs:
       - name: Gets Model 1
         run:  wget --no-check-certificate -O '/tensorflow_src/{{secrets.MODEL1_NAME}}' '${{secrets.DRIVE_URL}}'
 
-      - run: dir tensorflow_src
+      - run: dir /tensorflow_src
       - name: Run build_aar_with_docker.sh
         run: bash build_aar_with_docker.sh --input_models=./${{secrets.MODEL1_NAME}} --target_archs=arm64-v8a,armeabi-v7a --checkpoint=master
