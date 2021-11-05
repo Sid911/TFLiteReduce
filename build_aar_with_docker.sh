@@ -123,8 +123,8 @@ else
   git checkout ${FLAG_CHECKPOINT}
 
   # Configure Bazel.
-  source tensorflow/tools/ci_build/release/common.sh
-  install_bazelisk
+#   source tensorflow/tools/ci_build/release/common.sh
+#   install_bazelisk
   echo "bazelisk installed"
   
   # Building with bazel.
