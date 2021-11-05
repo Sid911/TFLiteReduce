@@ -24,11 +24,11 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
 #       - uses: actions/checkout@v2
-      - run: ls
+      - run: dir
       
       # Runs a single command using the runners shell
       - name: Gets Model 1
         run:  wget --no-check-certificate -O '/tensorflow_src/{{secrets.MODEL1_NAME}}' '${{secrets.DRIVE_URL}}'
 #       - name: Run build_aar_with_docker.sh
 #         run: bash build_aar_with_docker.sh --input_models=./${{secrets.MODEL1_NAME}} --target_archs=arm64-v8a,armeabi-v7a --checkpoint=master
-      - run: ls ./tensorflow_src
+      - run: dir /
