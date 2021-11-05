@@ -131,7 +131,7 @@ else
   export BAZEL_CACHE_DIR=${BAZEL_CACHE_DIR}
   export OMIT_PRINTING_OUTPUT_PATHS=YES
   echo "Starting the build_aar.sh script"
-  bash /tensorflow_src/tensorflow/lite/tools/build_aar.sh ${BUILD_FLAGS}
+  bash ./tensorflow/lite/tools/build_aar.sh ${BUILD_FLAGS}
 
   # Copy the output files from docker container.
   OUT_FILES="/tensorflow_src/bazel-bin/tmp/tensorflow-lite.aar"
