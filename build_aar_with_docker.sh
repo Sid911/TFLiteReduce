@@ -91,7 +91,10 @@ if [ ! -d /tensorflow_src ]; then
   exit 0
 else
   # Running inside docker container, download the SDK first.
-  android update sdk --no-ui -a \
+  # androidUpdateConfigs=(
+  #  'y'
+  # )
+  printf 'y\n' | android update sdk --no-ui -a \
     --filter tools,platform-tools,android-${ANDROID_API_LEVEL},build-tools-${ANDROID_BUILD_TOOLS_VERSION}
 
   cd /tensorflow_src
